@@ -8,7 +8,7 @@
 ---
 
 ### Project Setup
-- [ ] Configure environments: React (frontend), Spring Boot (backend), PostgreSQL (database), and AWS (cloud services).
+- [ ] Configure environments: React (frontend), NodeJS (backend), PostgreSQL (database), and AWS (cloud services).
 
 ### User Management
 - [ ] Implement user registration, login, and authentication (JWT).
