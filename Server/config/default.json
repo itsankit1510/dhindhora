@@ -1,8 +1,9 @@
 {
-    "HTTP_PORT": 3001,
-    "DB": {
-        "USERNAME": "postgres",
-        "PASSWORD": "YOUR_DB_PASS",
-        "PORT": 5432
-    }
+  "HTTP_PORT": 3001,
+  "DB": {
+    "NAME": "Dhindhora",
+    "USERNAME": "postgres",
+    "PASSWORD": "YOUR_DB_PASS",
+    "PORT": 5432
+  }
 }

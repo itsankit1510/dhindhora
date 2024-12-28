@@ -1,14 +1,12 @@
-var DataTypes = require("sequelize").DataTypes;
-var _student = require("./student");
+import _sequelize from "sequelize";
+const DataTypes = _sequelize.DataTypes;
+import _user from  "./user.js";
 
-function initModels(sequelize) {
-  var student = _student(sequelize, DataTypes);
+export default function initModels(sequelize) {
+  const user = _user.init(sequelize, DataTypes);
 
 
   return {
-    student,
+    user,
   };
 }
-module.exports = initModels;
-module.exports.initModels = initModels;
-module.exports.default = initModels;

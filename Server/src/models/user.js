@@ -1,6 +1,9 @@
-const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('student', {
+import _sequelize from 'sequelize';
+const { Model, Sequelize } = _sequelize;
+
+export default class user extends Model {
+  static init(sequelize, DataTypes) {
+  return super.init({
     id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
@@ -22,15 +25,15 @@ module.exports = function(sequelize, DataTypes) {
     email: {
       type: DataTypes.STRING(255),
       allowNull: false,
-      unique: "students_email_key"
+      unique: "users_email_key"
     },
-    studentid: {
+    userid: {
       type: DataTypes.STRING(50),
       allowNull: false,
-      unique: "students_studentid_key"
+      unique: "users_userid_key"
     },
     profile_picture: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING(255),
       allowNull: true
     },
     isfirstlogin: {
@@ -45,31 +48,32 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {
     sequelize,
-    tableName: 'students',
+    tableName: 'users',
     schema: 'public',
     timestamps: true,
     indexes: [
       {
-        name: "students_email_key",
+        name: "users_email_key",
         unique: true,
         fields: [
           { name: "email" },
         ]
       },
       {
-        name: "students_pkey",
+        name: "users_pkey",
         unique: true,
         fields: [
           { name: "id" },
         ]
       },
       {
-        name: "students_studentid_key",
+        name: "users_userid_key",
         unique: true,
         fields: [
-          { name: "studentid" },
+          { name: "userid" },
         ]
       },
     ]
   });
-};
+  }
+}
