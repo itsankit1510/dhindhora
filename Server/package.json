@@ -1,0 +1,22 @@
+{
+  "name": "Dhindhora server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.js",
+    "create-models": "node ./src/database/auto-gen.js -l es6"
+  },
+  "author": "ankitsinghbisht.work@gmail.com",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "config": "^3.3.12",
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5",
+    "sequelize-auto": "^0.8.8"
+  }
+}
