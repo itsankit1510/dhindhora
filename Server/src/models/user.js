@@ -45,6 +45,10 @@ export default class user extends Model {
       type: DataTypes.BOOLEAN,
       allowNull: true,
       defaultValue: false
+    },
+    birthdate: {
+      type: DataTypes.DATEONLY,
+      allowNull: true
     }
   }, {
     sequelize,
